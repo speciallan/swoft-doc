@@ -1,24 +1,24 @@
-# 定义命令
-命令的定义主要通过@Command和@Mapping两个注解，@Command 定义命令组名称，@Mapping 定义操作命令的映射关系。
+# Define Commands
+Swoft use @Command and @Mapping to define commands. And @Command is to define commands group while @Mapping is to define the mapping of operating commands.
 
-## 注解
+## Annotaions
 
 **@Command**
 
-定义命令组
+Define commands group
 
-- name 参数，定义命令组名称，如果缺省，根据配置后缀自动解析
-- coroutine 参数，定义命令是否为协程，默认 false,如果为true，框架会启动一个协程运行改命令
+- name [Param] Define the name of commands group, and it will get by configuration when it is null.
+- coroutine [Param] Define coroutine commands, default is  false, and Swoft will start a coroutine to run these commands while this param is true.
 
 **@Mapping**
 
-定义操作命令映射关系
+Define mappings of operating commands.
 
-- name 参数，定义操作命令的一个映射名称，如果缺省，会执行使用方法名称。
+- name [Param] Define the mapping of operating commands, swoft will execute commands by using their method names when this param is null.
 
-## 帮助信息
+## Help
 
-命令帮助信息是命令使用说明信息，也是通过注解完成定义。
+Swoft use annotions to define this.
 
 - 类描述，对应命令组信息描述
 - 方法描述，对应该执行命令的信息描述
